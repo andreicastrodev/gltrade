@@ -1,0 +1,124 @@
+.header{
+	grid-column: full-start / full-end;
+	background-color: $color-primary-dark-1;
+	display: flex;
+	align-items: center;
+	padding: 1rem 0rem;
+	@media only screen and (max-width: $bp-medium){
+	grid-column: sidebar-start  / full-end;
+	padding: 1rem;
+ }	
+	&__text{
+	flex: 0 0 30%;
+	display: flex;
+	align-items: center;		
+	}
+
+
+
+	&__icon{
+		width: 4.5rem;
+		height: 4.5rem;
+		margin-right: .5rem;
+
+		fill: $color-secondary;
+	}
+
+
+
+	&__search{
+		flex: 0 0 50%;
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+	}
+
+
+
+	&__user{
+
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	align-self: stretch;
+	cursor: pointer;
+		&-box{
+			position: relative;
+			margin-left: 2rem;
+		}
+
+
+		&-icon{
+			width: 4rem;
+			height: 4rem;
+			fill: $color-grey-light-1;
+			background-color: $color-primary;
+			padding: 1rem;
+
+			border-radius:50%;
+		
+		}
+
+
+		&-notif{
+		font-size: 1rem;
+		height: 1.75rem;
+		width: 1.75rem;
+		border-radius: 50%;
+		color:$color-grey-light-1;
+		background-color: $color-orange;
+		position: absolute;
+		top: -.1rem;
+		left:2.2rem;
+		display:flex;
+		align-items: center;
+		justify-content: center;
+		}
+
+
+		&-img{
+			height: 4rem;
+			border-radius: 50%;
+		}
+
+
+	}
+}
+
+
+.search{
+	flex: 0 0 100%;
+
+	display:flex;
+	align-items: center;
+	justify-content: center;
+
+	&__input{
+		font-family: $font-regular;
+		border-radius: 10rem;
+		margin-left: .5rem;
+		width:100%;
+		border: none;
+		background-color: $color-primary-dark-1;
+		color: $color-grey-light-1;
+		transition: all .2s;
+		font-size: 1.6rem;
+
+	}
+
+
+	&__icon{
+		width: 2rem;
+		height: 2rem;
+		fill: $color-grey-light-1;
+	}
+
+	&__button{
+
+		border:none;
+		outline:none;
+		cursor: pointer;
+		background-color: $color-primary-dark-1;
+	}
+}

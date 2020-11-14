@@ -1,0 +1,114 @@
+.content{
+	grid-column: col-start 2 / col-end 7;
+
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(20rem,1fr));
+	grid-gap: 2rem;
+	animation: moveInLeft 1.5s ease-in;
+	@media only screen and (max-width: $bp-lm){
+	grid-column: center-start  / center-end;
+
+ }	
+
+ 	@media only screen and (max-width: $bp-medium){
+	grid-column: sidebar-start  / full-end;
+	padding: 1rem;
+ }	
+
+	&__block{
+		background-color:$color-primary-light-1;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(4, min-content);
+		padding: 1.5rem;
+		grid-gap: 1rem;
+		border-radius: 5px;
+		&-title{
+			grid-column: 1 / -1;
+			display:flex;
+			justify-content: space-between;
+			
+		}
+
+		&-name{
+
+			span{
+				color:$color-grey-light-1;
+			}
+		}
+
+		&-svg{
+			width: 2.5rem;
+			height: 2.5rem;
+			fill:$color-grey-light-1;
+		}
+
+		&-put{
+			grid-column: 1 / -1;
+			display:flex;
+			justify-content: space-between;
+			align-items: center;
+			border-bottom: 1px solid$color-grey-dark-1;
+			padding: .5rem 0rem;
+			span{
+				color:$color-grey-light-4;
+			}
+		}
+
+		&-cost{
+			grid-column: 1 / -1;
+			display:flex;
+			justify-content: space-between;
+			align-items: center;
+			
+			span{
+				color:$color-grey-light-4;
+			}			
+		}
+
+		&-modified{
+			grid-column: 1 / -1;
+			display:flex;
+			justify-content: space-between;
+		}
+
+		&-date{
+			grid-column: 1 / -1;
+			display:flex;
+			justify-content: space-between;
+			flex-direction: column;
+			span{
+				text-transform: uppercase;
+				font-weight: 700;
+				letter-spacing: 1px;
+				color:$color-grey-dark-2;
+				font-size: .7rem;
+			}
+
+			p{
+				color:$color-grey-light-1;
+				font-weight: 700;
+			}			
+		}
+
+		&-notification{
+			grid-column: 1 / -1;
+			display:flex;
+			justify-content: space-between;
+			position: relative;
+
+			span{
+				background-color: $color-secondary;
+				border-radius: 50%;
+				width: 2rem;
+				height: 2rem;
+				display:flex;
+				align-items:center;
+				justify-content:center;
+				position: absolute;
+				top: -.5rem;
+				left: 1.7rem;
+			}
+		}
+	}
+}

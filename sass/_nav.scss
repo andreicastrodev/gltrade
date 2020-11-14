@@ -1,0 +1,42 @@
+.nav{
+	grid-row: 1 / -1;
+	background-color: $color-primary-dark-1;
+	padding: 2rem;
+
+	@media only screen and (max-width: $bp-medium){
+	grid-column: sidebar-start / full-end;
+	grid-row: unset;
+ }	 
+	&__content{
+	margin-top: 10rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	@media only screen and (max-width: $bp-medium){
+	margin-top:  0;
+	flex-direction: row;
+	justify-content: space-evenly;
+ }
+
+	}
+
+
+
+	&__svg{
+		width: 3rem;
+		height: 3rem;
+		margin-top: 3rem;
+		fill: $color-grey-light-1;
+		cursor: pointer;
+
+		&--1{
+			background-color: $color-secondary;
+			padding: .5rem;
+			height: 4rem;
+			width: 4rem;
+			border-radius: 1rem;						
+		}
+	}
+}
